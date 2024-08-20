@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Débito Automático</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Solicitud de Débito Automático</h2>
+        <form action="/submit_form" method="POST">
+            <label for="titular_cuenta">Titular de la Cuenta</label>
+            <input type="text" id="titular_cuenta" name="titular_cuenta" required>
+
+            <label for="cbu">CBU</label>
+            <input type="text" id="cbu" name="cbu" required>
+
+            <label for="alias">ALIAS</label>
+            <input type="text" id="alias" name="alias" required>
+
+            <label for="nombre_cliente">Nombre del Cliente</label>
+            <input type="text" id="nombre_cliente" name="nombre_cliente" required>
+
+            <label for="dni">DNI / CUIT / CUIL</label>
+            <input type="text" id="dni" name="dni" required>
+
+            <label for="numero_abonado">Número de Abonado y Servicios</label>
+            <input type="text" id="numero_abonado" name="numero_abonado" required>
+
+            <input type="submit" value="Enviar Solicitud">
+        </form>
+    </div>
+</body>
+</html>
