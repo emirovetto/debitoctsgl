@@ -9,7 +9,7 @@ import os
 
 app = Flask(__name__)
 
-PDF_TEMPLATE_PATH = 'C:/Users/sgnca/Documents/DEBITOCTSGL/DEBITOCTSGL.pdf'
+PDF_TEMPLATE_PATH = '/Users/emilianorovetto/Documents/debitoautomaticoctsgl/SOLICITUDDEBITOCTSGLOK.pdf'
 
 @app.route('/')
 def index():
