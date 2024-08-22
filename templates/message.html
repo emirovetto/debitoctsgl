@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud Enviada</title>
-    <script type="text/javascript">
-        function showAlert() {
-            alert("SOLICITUD ENVIADA PARA VALIDAR Y COMPLETAR LA MISMA DEBE FIRMAR EN LA COOPERATIVA EL TITULAR DE LA CUENTA. Contacto: 3401436201");
-            window.location.href = "/";
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
         }
-    </script>
+        .message-container {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+            text-align: center;
+        }
+        .message-container h2 {
+            margin-bottom: 20px;
+        }
+        .logo {
+            margin-bottom: 20px;
+            width: 150px;
+            height: auto;
+        }
+        .notice {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body onload="showAlert()">
+<body>
+    <div class="message-container">
+        <img src="https://cooptelsangenaro.com.ar/WebCTSGL/logoctsgl.png" alt="Logo CTSGL" class="logo">
+        <h2>Solicitud Enviada Correctamente!</h2>
+        <p class="notice">
+            Para completar esta solicitud el titular de la cuenta a debitar deberá firmar la aprobación de la misma en la Cooperativa.
+            <br>Contacto: 3401436201
+        </p>
+    </div>
 </body>
 </html>

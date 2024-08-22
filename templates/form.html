@@ -7,20 +7,24 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #333;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
         .form-container {
             background-color: white;
+            color: black;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 400px;
             max-width: 100%;
+            margin-bottom: 20px;
         }
         .form-container h2 {
             text-align: center;
@@ -51,9 +55,21 @@
         .form-container input[type="submit"]:hover {
             background-color: #218838;
         }
+        .logo {
+            margin-bottom: 20px;
+            width: 300px;
+            height: auto;
+        }
+        .notice {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
+    <img src="https://cooptelsangenaro.com.ar/WebCTSGL/logoctsgl.png" alt="Logo CTSGL" class="logo">
     <div class="form-container">
         <h2>Solicitud de Débito Automático</h2>
         <form action="/submit_form" method="POST">
@@ -66,17 +82,20 @@
             <label for="alias">ALIAS</label>
             <input type="text" id="alias" name="alias" required>
 
-            <label for="nombre_cliente">Nombre del Cliente</label>
+            <label for="nombre_cliente">Titular del Servicio</label>
             <input type="text" id="nombre_cliente" name="nombre_cliente" required>
 
             <label for="dni">DNI / CUIT / CUIL</label>
             <input type="text" id="dni" name="dni" required>
 
-            <label for="numero_abonado">Número de Abonado y Servicios</label>
+            <label for="numero_abonado">Número de Abonado y Servicios a Debitar</label>
             <input type="text" id="numero_abonado" name="numero_abonado" required>
 
             <input type="submit" value="Enviar Solicitud">
         </form>
+    </div>
+    <div class="notice">
+        Para completar esta solicitud el titular de la cuenta a debitar deberá firmar la aprobación de la misma en la Cooperativa.
     </div>
 </body>
 </html>
